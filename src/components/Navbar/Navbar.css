@@ -91,18 +91,20 @@
         
         flex-direction: column;
         align-items: flex-start;
+        padding: 0;
     }
     .items ul{
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 1.5rem;
         margin: 0;
+        padding: 0;
     }
     .items li{
         margin: 0rem;
     }
     .contact{
-        width: 120px;
+        width: 100px;
         height: 48px;
         font-size: 1rem;
     }

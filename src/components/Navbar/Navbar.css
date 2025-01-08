@@ -74,4 +74,39 @@
     background-color: black;
     outline: 1.5px solid yellow;
 }
+@media (max-width:768px){
+    .navbar{
+        padding: 0 1rem;
+        margin-bottom: 20px;
+        position: sticky;
+    }
+    .items{
+        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .items ul{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+    .items li{
+        margin: 0rem;
+    }
+    .contact{
+        width: 70px;
+        height: 25px;
+        font-size: 0.5rem;
+    }
+    .icon{
+        background-color: white;
+        width: 5rem;
+        height: auto;
+        border-radius: 20%;
+    
+    }
+   
+}
  

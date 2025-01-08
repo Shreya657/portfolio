@@ -82,8 +82,8 @@
         margin-bottom: 20px;
         width: 1000px;
         overflow-x: hidden;
-        max-width: 200%;
-        overflow-x: auto;
+        max-width: 150%;
+        
         position: sticky;
     }
     .items{
@@ -94,7 +94,7 @@
     .items ul{
         display: flex;
         flex-direction: row;
-        gap: 4rem;
+        gap: 2rem;
         padding: 2rem;
         margin: 0;
     }

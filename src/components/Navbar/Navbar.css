@@ -6,6 +6,7 @@
     z-index: 30;
     backdrop-filter: blur(50px);
     overflow-x: hidden;
+    height: 100%;
     
 }
 .items{
@@ -80,9 +81,9 @@
     .navbar{
         padding: 0 1rem;
         margin-bottom: 20px;
-        width: 1000px;
+        width: 1200px;
         overflow-x: hidden;
-        max-width: 150%;
+        max-width: 200%;
         
         position: sticky;
     }
@@ -111,7 +112,6 @@
         width: 7rem;
         height: auto;
         border-radius: 20%;
-        margin-left: 30px;
         margin-top: 20px;
     
     }

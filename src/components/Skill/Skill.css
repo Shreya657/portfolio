@@ -1,0 +1,83 @@
+.skill-contains{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.info{
+height: 400px;
+width: 1000px;
+background-color: rgb(13, 122, 181);
+display: flex;
+flex-direction: column;
+
+border-radius: 5rem;
+
+
+
+
+}
+.title{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(31, 26, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem 5rem 0 0 ;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos{
+    width: 70%;
+    display: flex;
+    background-color: rgb(48, 40, 40);
+    overflow-x: scroll;
+   padding-top: 40px;
+   margin-top: 20px;
+   padding-bottom: 20px;
+   border-radius: 3rem;
+   
+}
+.logos div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    flex: none;
+
+}
+.logos div img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    height: 100px;
+    width: 100px;
+    padding-left: 20px;
+    
+    
+}
+.logos::-webkit-scrollbar{
+    display: none;
+}
+#back, #next{
+    height: 50px;
+    width: 50px;
+    background: none;
+    mix-blend-mode: multiply;
+}
+.logos div img:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.sIcon{
+    height: 100px;
+    width: 100px;
+}

@@ -76,7 +76,7 @@
     .introduction{
       padding: 1rem;
       font-size: 1.5rem;
-      margin-top: 50px;
+      
     }
     .hello{
       font-size: 1.2rem;
@@ -111,13 +111,14 @@
       width: 150px;
       position: absolute;
       top: 2.5rem;
-      left: 5rem;
+      left: 6.6rem;
       background-color: blue;
       border-radius: 50%;
     
       
     }
     .cls{
+      margin-top: 40px;
       display: flex;
       justify-content: center;
       align-items: center;

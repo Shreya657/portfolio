@@ -72,13 +72,7 @@
 
 
    @media (max-width:480px){
-    #intro{
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      
     
-    }
     .introduction{
       padding: 1rem;
       font-size: 1.5rem;
@@ -95,6 +89,8 @@
     }
     .para{
       font-size: 0.9rem;
+      color: black;
+      font-weight: bold;
     }
     .btn{
       font-size: 1rem;
@@ -111,16 +107,22 @@
       
     }
     .picture{
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
       position: absolute;
       top: 2.5rem;
-      left: 6.5rem;
+      left: 5rem;
       background-color: blue;
       border-radius: 50%;
     
       
     }
+    .cls{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+ 
    }
    
 

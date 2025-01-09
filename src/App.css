@@ -3,7 +3,7 @@ html, body {
     width: 100%; /* Ensure full width */
     margin: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: scroll;   /* Allow vertical scrolling if needed */
+    overflow-y: visible;   /* Allow vertical scrolling if needed */
   }
   
   /* Additional CSS to make sure no child element causes horizontal overflow */

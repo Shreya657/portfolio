@@ -72,7 +72,10 @@
 
 
    @media (max-width:480px){
-    
+    #intro{
+      height: 80vh;
+      
+    }
     .introduction{
       padding: 1rem;
       font-size: 1.5rem;

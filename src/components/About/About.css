@@ -16,7 +16,9 @@
     border-radius: 5rem;
     
     
+    
 }
+
 .img{
     padding-left: 30px;
     padding-top: 40px;
@@ -34,4 +36,50 @@
     padding-left: 30px;
     padding-right: 30px;
     
+}
+.aPara p{
+    margin-top: 100px;
+}
+
+@media (max-width:768px){
+    .abt{
+        height: 510px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        
+    
+
+    }
+    .aPara{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        height: 50px;
+        text-align: center;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        
+        
+        
+    }
+    .img{
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .aIcon{
+        height: 200px;
+        padding-top: 10px;
+        margin: 0;
+        width: 200px;
+        padding-top: 10px;
+        
+    }
+    .aPara p{
+        margin: 0;
+        font-weight: bolder;
+        font-size: 0.85rem;
+    }
 }

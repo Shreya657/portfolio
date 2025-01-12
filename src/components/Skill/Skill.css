@@ -81,6 +81,9 @@ border-radius: 5rem;
     width: 100px;
 }
 @media(max-width:768px){
+    .skill-container{
+        height: 80vh;
+    }
     .info{
         width: 400px;
         border-radius: 0;

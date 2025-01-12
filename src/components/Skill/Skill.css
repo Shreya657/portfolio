@@ -13,7 +13,6 @@ width: 1000px;
 background-color: rgb(13, 122, 181);
 display: flex;
 flex-direction: column;
-
 border-radius: 5rem;
 
 
@@ -92,5 +91,8 @@ border-radius: 5rem;
     .logos{
         
         width: 60%;
+    }
+    .logos div img{
+        padding-right: 20px;
     }
 }

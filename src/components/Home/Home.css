@@ -102,10 +102,7 @@
       font-size: 1rem;
       width: 70%;
     }
-    .socialIcon{
-      height: 30px;
-      width: 30px;
-    }
+  
     .dp{
       display: flex;
       justify-content: center;

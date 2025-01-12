@@ -43,12 +43,18 @@
       }
       @media(max-width:768px){
         .yourName,.email,.msg{
-          width: 70%;
+          width: 80%;
         }
         .submit{
           font-weight: bold;
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
+        .con h2{
+          font-weight: bolder;
+          font-size: 2rem;
+          padding-left: 10px;
+        }
+       
       }
       
     

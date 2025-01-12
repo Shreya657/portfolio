@@ -13,7 +13,7 @@ const Skill = () => {
         
         </div>
         <div className="logo">
-          <img src="" alt="" />
+          
         <div className="logos">
         <div>
         <img className='sIcon' src="https://tse2.mm.bing.net/th?id=OIP.744mxzC5wmuJwSAv6Ej3XwHaHa&pid=Api&P=0&h=220" alt=""  />
@@ -28,7 +28,7 @@ const Skill = () => {
         <img src="https://tse4.mm.bing.net/th?id=OIP.lqKY2Ft1FXTXTivr9vSCAAHaDj&pid=Api&P=0&h=220" alt="" />
         </div>
         </div>
-        <img src="" alt="" />
+        
       </div> 
       </div>
     </div>

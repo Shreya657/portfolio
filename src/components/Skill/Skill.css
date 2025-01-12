@@ -81,3 +81,16 @@ border-radius: 5rem;
     height: 100px;
     width: 100px;
 }
+@media(max-width:768px){
+    .info{
+        width: 400px;
+        border-radius: 0;
+    }
+    .title{
+        border-radius: 0;
+    }
+    .logos{
+        
+        width: 60%;
+    }
+}

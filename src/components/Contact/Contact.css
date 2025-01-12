@@ -7,10 +7,6 @@
     align-items: center;
     flex-direction: column;
 }
-    
-        
-      
-       
       .contactForm{
         margin: 1rem;
         display: flex;
@@ -47,7 +43,11 @@
       }
       @media(max-width:768px){
         .yourName,.email,.msg{
-          width: 100%;
+          width: 70%;
+        }
+        .submit{
+          font-weight: bold;
+          font-size: 1.5rem;
         }
       }
       

@@ -1,37 +1,63 @@
-import React, { useRef } from 'react'
-import { useState } from 'react';
-import './Contact.css'
-import emailjs from '@emailjs/browser';
-const Contact = () => {
-      const form=useRef();
-      const sendEmail=(e)=>{
-        e.preventDefault();
-        emailjs.sendForm('service_zzce00u','template_deowjac',form.current,{
-          publicKey:'WFcvSGR05VftbK3wy',
-        })
-        .then(
-          (result)=>{
-            console.log(result.text);
-            e.target.reset();
-            alert('Your Response is send successfully');
-          },
-          (error)=>{
-            console.log(error.text);
-          },
-        );
-      };
+import React, { useState } from 'react'
 
-      const[values,setValues]=useState({
+import './Contact.css'
+
+const Contact = () => {
+  const[values,setValues]=useState({
+user_name:'',
+user_email:'',
+message:'',
+
+  })
+  const handleChange=(e)=>{
+    setValues({...values,[e.target.name]:[e.target.value]})
+     }
+    
+  
+     
+    
+  
+ 
+   
+
+          const onSubmit = async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
         
-        your_name:'',
-        your_email:'',
+            formData.append("access_key", "c5a392c3-e243-4892-bf6a-3e90dabb5eca");
+        
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+        
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: json
+            }).then((res) => res.json());
+        
+            if (res.success) {
+              alert("submitted successfully!");
+              console.log("Success", res);
+            }
+            handleReset();
+          
+          
+          };
+          function handleReset(){
+            setValues({user_name:'',
+              user_email:'',
         message:''
+            })}
+          
+      
+       
         
-          })
+
            
-          const handleChange=(e)=>{
-         setValues({...values,[e.target.name]:[e.target.value]})
-          }
+        
          
       
 
@@ -41,11 +67,11 @@ const Contact = () => {
   return (
     <div  className='con'>
      <h1 className="header">Let's Connect</h1>
-     <form ref={form} onSubmit={sendEmail} action="" className="contactForm">
-    <input type="text " className='yourName'  placeholder='enter your name' name='your_name'   onChange={(e)=>handleChange(e)} required value={values.your_name}/>
-    <input type="email" className='email' placeholder='enter your email' name='your_email' onChange={(e)=>handleChange(e)} required value={values.gender} />
-    <textarea name="message" className='msg' rows={5} placeholder='Your Message' onChange={(e)=>handleChange(e)} required value={values.gender} ></textarea>
-    <button type='submit' value='send' className="submit">Submit</button>
+     <form onSubmit={onSubmit} action="" className="contactForm">
+    <input type="text " className='yourName'  placeholder='enter your name' name='user_name' onChange={handleChange}  required value={values.user_name}   />
+    <input type="email" className='email' placeholder='enter your email' name='user_email' onChange={handleChange}  required value={values.user_email}  />
+    <textarea name="message" className='msg' rows={5} placeholder='Your Message' onChange={handleChange}  required value={values.message} ></textarea>
+    <button  type='submit' value='send' className="submit">Submit</button>
 
 
 

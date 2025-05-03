@@ -1,11 +1,13 @@
 .con{
-    background-color: rgb(2, 1, 18);
+    /* background-color: rgb(2, 1, 18); */
     height: 110vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
+
 }
       .contactForm{
         margin: 1rem;
@@ -19,27 +21,49 @@
         font-weight: bolder;
 
       }
-      .yourName,.email,.msg{
-        font-size: medium;
-        width: 50%;
-        max-width: 40rem;
-        margin: 0.5rem;
-        padding: 0.5rem 1rem;
-        color: aliceblue;
-        border: 2px solid white;
-        background-color: black;
+       
+      .contactForm input,
+.contactForm textarea {
+  /* common styles for all inputs & textareas inside the form */
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  /* width: 100%; */
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 40rem;
+  height: 35px;
+  background-color: beige;
+  resize: none;
+}
+.header{
+  border-bottom: 3px solid black;
+}
 
-      }
-      .msg{
-        resize: none;
-      }
+.header.dark{
+  border-bottom: 3px solid white;
+
+}
+
+
+
+
+     
       .submit{
-        background-color: aliceblue;
+        background-color: blue;
         border: none;
         padding: 0.75rem 3.5rem;
         border-radius: 0.5rem;
         margin: 2rem;
-        color: black;
+        color: white;
+        font-size: 1rem;
+
+      }
+      .submit:hover{
+        background-color: black;
+
       }
       @media(max-width:768px){
         .yourName,.email,.msg{

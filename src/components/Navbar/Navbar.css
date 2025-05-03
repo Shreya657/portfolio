@@ -1,5 +1,5 @@
 .navbar{
-    background-color: black;
+    background-color: transparent;
     padding:0 4rem ;
     position: sticky;
     top: 0;
@@ -7,6 +7,8 @@
     backdrop-filter: blur(50px);
     overflow-x: hidden;
     height: 100%;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s;
     
 }
 .items{
@@ -20,9 +22,10 @@
 }
 .icon{
     background-color: white;
-    width: 10rem;
+    width: 5rem;
     height: auto;
     border-radius: 20%;
+   box-shadow: 7px 7px 70px yellow;
 
 }
 .items ul{
@@ -38,7 +41,7 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: bolder;
-    color: white;
+    /* color: white; */
     position: relative;
     cursor: pointer;
 }
@@ -118,4 +121,49 @@
     }
    
 }
+
+
+  
+  /* Light Mode (Default) */
+  .navbar.light {
+    background: url('https://www.transparenttextures.com/patterns/white-wall-3.png') repeat;
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  /* Dark Mode */
+  .navbar.dark {
+    background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png') repeat;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  
+  
+  .toggle-btn {
+    margin-left: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Light mode button text color */
+  .light-btn {
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  
+  /* Dark mode button text color */
+  .dark-btn {
+    color: yellow;
+    border: 1.6px solid white;
+    border-radius: 20px;
+
+  }
+  
+  
  

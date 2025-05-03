@@ -1,13 +1,13 @@
 import React from 'react'
 import './Skill.css'
 
-const Skill = () => {
+const Skill = ({darkMode}) => {
  
 
   return (
       <div className="skill-contains">
         <div className="info">
-       <div className="title">
+       <div className={`title ${darkMode? 'dark' : 'light'}`}>
         <h1> Technical Skills</h1>
 
         

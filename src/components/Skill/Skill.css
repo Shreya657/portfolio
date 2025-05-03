@@ -1,7 +1,7 @@
 .skill-contains{
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,12 @@ border-radius: 5rem;
     justify-content: center;
     align-items: center;
     border-radius: 5rem 5rem 0 0 ;
+    border: 2px solid white;
+}
+.title.light{
+    background-color: rgb(183, 183, 180);
+    color: black;
+    border: 2px solid black;
 }
 
 .logo{
@@ -43,6 +49,7 @@ border-radius: 5rem;
    margin-top: 20px;
    padding-bottom: 20px;
    border-radius: 3rem;
+
    
 }
 .logos div{
@@ -50,6 +57,8 @@ border-radius: 5rem;
     display: grid;
     grid-template-columns: auto auto auto auto ;
     flex: none;
+    animation: scroll 20s linear infinite;
+
 
 }
 .logos div img{
@@ -80,6 +89,14 @@ border-radius: 5rem;
     height: 100px;
     width: 100px;
 }
+@keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 @media(max-width:768px){
     .skill-container{
         height: 80vh;

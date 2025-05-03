@@ -4,42 +4,119 @@
     max-width: 80rem;
     margin: 0 auto;
     overflow: hidden;
-    background-color: yellow;
+    /* background-color: yellow; */
+    border: 2px solid white;
     position: relative;
 }
+#intro.light{
+  border: 2.5px solid black;
+  height: 100vh;
+  width: 100vw;
+  max-width: 80rem;
+  margin: 0 auto;
+  overflow: hidden;
+  /* background-color: yellow; */
+ 
+  position: relative;
+}
+
 .picture{
     position: absolute;
-   top:10px;
+   top:20px;
    right: 5rem;
    background: none;
-   height: 100vh;
-   width: 500px;}
+   height: 80vh;
+   width: 400px;
+   border-radius: 50%;
+  
+  
+   /* Start hidden and moved */
+   opacity: 0;
+   transform: translateX(100px);
+ 
+   /* Animation */
+   animation: fadeSlideIn 1s ease-out forwards;
+ 
+}
 
-   .introduction{
+
+
+
+
+
+ /* Keyframes for the animation */
+ @keyframes fadeSlideIn {
+   to {
+     opacity: 1;
+     transform: translateX(0);
+   }
+ }
+
+   .introduction.dark{
     height: 100vh;
     width: 100vw;
-    padding: 5rem;
+    padding-left: 5rem;
     font-size: 3rem;
     font-weight: bolder;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
 
    }
+   .introduction.light{
+   
+    height: 100vh;
+    width: 100vw;
+    padding-left: 5rem;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
    .hello{
     font-size: 1.7rem;
     font-weight: 100;
    }
-   .name{
-     color: blue;
+  
+   .name.dark{
+     color: yellow;
    }
+   .name.light{
+    color: red;
+  }
+  
    .para{
-    font-size: medium;
-    font-weight: 100;
+    font-size: 1.2rem;
     letter-spacing: 1px;
-   }
+    width: 730px;
+    font-weight: bold;
+     /* Start hidden and moved */
+     opacity: 0;
+     transform: translateX(100px);
+   
+     /* Animation */
+     animation: fadeSlideIn 1s ease-out forwards;
+   
+  }
+  
+  
+  
+  
+  
+  
+   /* Keyframes for the animation */
+   @keyframes fadeSlideIn {
+     to {
+       opacity: 1;
+       transform: translateX(0);
+     }
+   } 
+
+   
    .btn{
     background-color: white;
     margin: 1rem 0;
@@ -59,18 +136,38 @@
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    /* background-color: aqua; */
+    width: 300px;
+   justify-content: center; 
+   padding-top: 2rem;
    }
-   .socialIcon{
-    filter: grayscale(100%);
+   .socialIcon {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-   }
-   .socialIcon:hover{
-    filter: grayscale(0);
-   }
 
-
+    border: none;
+    opacity: 0;
+    filter: grayscale(100%);
+    transform: translateX(100px);
+    animation: fadeColorIn 1s ease-out forwards;
+  }
+  
+  /* Animate filter + opacity + position */
+  @keyframes fadeColorIn {
+    to {
+      opacity: 1;
+      filter: grayscale(0%);
+      transform: translateX(0);
+    }
+  }
+  
+  /* Optional: hover effect to highlight further */
+  .socialIcon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
    @media (max-width:480px){
     #intro{
       height: 90vh;
@@ -125,13 +222,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
  
    }
    
+/* 🌙 Dark mode styles */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
 
-  
-   
-    
-    
-    
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

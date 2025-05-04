@@ -28,24 +28,31 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="items">
         
         <img  className='icon' src="https://tse2.mm.bing.net/th?id=OIP.fxNrC3V2IhHyU1db85icvgHaFL&pid=Api&P=0&h=220" alt="Bubbles fonts"/>
+        <div className="right-controls">
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </div>
+          <button
+    className={`toggle-btn mobile-toggle ${darkMode ? 'dark-btn' : 'light-btn'}`}
+    onClick={toggleTheme}
+  >
+    {darkMode ? '🌞' : '🌙'}
+  </button>
+  </div>
+          <div className='show'>
             <ul className="desktop-only">
                 <li><a className='item' href="#home" >Home</a></li>
                 <li><a className='item' href="#about" > About</a></li>
                 <li><a  className='item'href="#skill" >Skills</a></li>
                 <li><a className='item' href="#project" >Projects</a></li>
                <li> <button className='contact' onClick={navigate} >Contact me</button></li>
-                <li><button className={`toggle-btn ${darkMode ? 'dark-btn' : 'light-btn'}`} onClick={toggleTheme}>
-              {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
-            </button>
-            </li>
+               
 
               
               
                
             </ul>
+            </div>
            
         </div>
         
@@ -54,6 +61,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
        {/* Fullscreen Mobile Menu */}
        {menuOpen && (
+        
         <div className={`mobile-menu ${darkMode ? 'mobile-dark' : 'mobile-light'}`}>
           <div className="close-btn" onClick={() => setMenuOpen(false)}>✕</div>
           <ul className="mobile-only">
@@ -71,8 +79,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </button>
             </li>
           </ul>
-        </div>
+          
+          
+         
+          </div>
+        
+         
+        
+        
       )}
+      
     </>
   )
 }

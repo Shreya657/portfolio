@@ -132,8 +132,14 @@
   }
   
   /* Hide mobile-only nav items by default */
-  .mobile-only,.mobile-menu {
+  .mobile-only{
     display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu.active {
+    display: flex; /* Show the menu */
   }
   
 
@@ -145,6 +151,10 @@
     .items {
       justify-content: space-between;
       padding: 0.5rem 1rem;
+    
+    }
+    .show{
+      display: none;
     }
   
     .hamburger {
@@ -187,7 +197,23 @@
       font-size: 28px;
       cursor: pointer;
     }
-  
+    .mobile-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .toggle-btn.dark-btn,
+  .toggle-btn.light-btn {
+    background-color: transparent;
+    color: inherit;
+  }
+  .right-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust this value to control the closeness */
+  }
     
   }
   

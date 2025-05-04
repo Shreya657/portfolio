@@ -4,7 +4,7 @@ import About from '../About/About'
 
 
 const Navbar = ({ darkMode, setDarkMode }) => {
-  const [menu,setMenu]=useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -12,21 +12,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   function navigate(){
     window.location.href="#contact";
   }
-  const handleMenuClick = () => {
-    setMenu(!menu);
-  };
 
+  
   const handleLinkClick = () => {
-    setMenu(false);
+    setMenuOpen(false); // Close menu when any link is clicked
   };
 
-  useEffect(() => {
-    if (menu) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }, [menu]);
+ 
   
 
   return (
@@ -36,30 +28,51 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="items">
         
         <img  className='icon' src="https://tse2.mm.bing.net/th?id=OIP.fxNrC3V2IhHyU1db85icvgHaFL&pid=Api&P=0&h=220" alt="Bubbles fonts"/>
-        
-        
-        <div className={`nav-links ${menu ? 'active' : ''}`}>
-
-            <ul>
-                <li><a className='item' href="#home" onClick={handleLinkClick}>Home</a></li>
-                <li><a className='item' href="#about" onClick={handleLinkClick}> About</a></li>
-                <li><a  className='item'href="#skill" onClick={handleLinkClick}>Skills</a></li>
-                <li><a className='item' href="#project" onClick={handleLinkClick}>Projects</a></li>
-                <button className='contact' onClick={()=>{navigate();setMenu(false);}} >Contact me</button>
-                <button className={`toggle-btn ${darkMode ? 'dark-btn' : 'light-btn'}`} onClick={()=>{toggleTheme();setMenu(false);}}>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </div>
+            <ul className="desktop-only">
+                <li><a className='item' href="#home" >Home</a></li>
+                <li><a className='item' href="#about" > About</a></li>
+                <li><a  className='item'href="#skill" >Skills</a></li>
+                <li><a className='item' href="#project" >Projects</a></li>
+               <li> <button className='contact' onClick={navigate} >Contact me</button></li>
+                <li><button className={`toggle-btn ${darkMode ? 'dark-btn' : 'light-btn'}`} onClick={toggleTheme}>
               {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
             </button>
+            </li>
 
-            <div className="close-icon" onClick={handleMenuClick}>✖</div>
               
               
                
             </ul>
            
         </div>
-        <div className="menu-icon" onClick={handleMenuClick}>☰</div>
-        </div>
+        
       </nav>
+
+
+       {/* Fullscreen Mobile Menu */}
+       {menuOpen && (
+        <div className={`mobile-menu ${darkMode ? 'mobile-dark' : 'mobile-light'}`}>
+          <div className="close-btn" onClick={() => setMenuOpen(false)}>✕</div>
+          <ul className="mobile-only">
+            <li><a className="item" href="#home" onClick={handleLinkClick}>Home</a></li>
+            <li><a className="item" href="#about" onClick={handleLinkClick}>About</a></li>
+            <li><a className="item" href="#skill" onClick={handleLinkClick}>Skills</a></li>
+            <li><a className="item" href="#project" onClick={handleLinkClick}>Projects</a></li>
+            <li><button className="contact" onClick={navigate}>Contact me</button></li>
+            <li>
+              <button
+                className={`toggle-btn ${darkMode ? 'dark-btn' : 'light-btn'}`}
+                onClick={toggleTheme}
+              >
+                {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   )
 }

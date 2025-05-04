@@ -176,13 +176,17 @@
       left: 0;
       height: 100vh;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.97);
+      /* background-color: rgba(255, 255, 255, 0.97); */
       z-index: 9999;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       animation: fadeIn 0.3s ease-in-out;
+      background-color: rgba(0, 0, 255, 0.4); /* semi-transparent blue */
+      backdrop-filter: blur(10px);           /* applies the blur */
+      -webkit-backdrop-filter: blur(10px);
+      color: #f0f0f0;
     }
   
     .mobile-dark {

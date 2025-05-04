@@ -70,14 +70,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <li><a className="item" href="#skill" onClick={handleLinkClick}>Skills</a></li>
             <li><a className="item" href="#project" onClick={handleLinkClick}>Projects</a></li>
             <li><button className="contact" onClick={navigate}>Contact me</button></li>
-            <li>
-              <button
-                className={`toggle-btn ${darkMode ? 'dark-btn' : 'light-btn'}`}
-                onClick={toggleTheme}
-              >
-                {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
-              </button>
-            </li>
+            
           </ul>
           
           

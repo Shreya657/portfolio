@@ -1,6 +1,6 @@
 .about{
     /* background-color: rgb(122, 122, 194); */
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     max-width: 80rem;
     margin: 0 auto;
@@ -30,16 +30,7 @@
     
     
 }
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 2s ease-in-out;
-  }
-  
-  .fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
   
 
 .img{
@@ -61,15 +52,10 @@
     font-size: large;
     font-weight: bold;
 
-        opacity: 0;
-        animation: fadeIn 1.5s ease-in forwards;
+       
+       
 }
-      
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
-      }
+     
 
     
 
@@ -81,12 +67,17 @@
     margin-top: 100px;
 }
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
     .abt{
-        height: 510px;
-        flex-direction: column;
+     /* height: 510px; */
+     height: 90vh;
+     width: 70vw;
+        /* flex-direction: column;
         align-items: center;
         border-radius: 10px;
+        padding: 1rem;
+        gap: 1.5rem;
+        border-radius: 1.5rem; */
         
     
 
@@ -110,11 +101,11 @@
         padding-top: 0;
     }
     .aIcon{
-        height: 200px;
-        padding-top: 10px;
-        margin: 0;
-        width: 200px;
-        padding-top: 10px;
+        height: 180px;
+        /* padding-top: 10px;
+        margin: 0; */
+        width: 180px;
+        /* padding-top: 10px; */
         
     }
     .aPara p{

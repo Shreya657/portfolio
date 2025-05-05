@@ -5,7 +5,7 @@ section#intro {
   justify-content: space-between;
   padding: 2rem;
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
 
  
 }
@@ -118,6 +118,7 @@ section#intro {
   .introduction {
     align-items: center;
     text-align: center;
+    padding: 3rem;
   }
 
   .hello {
@@ -135,15 +136,27 @@ section#intro {
   .para {
     font-size: 0.95rem;
     padding: 0 1rem;
+    word-break: break-word;
+    max-width: 100%;
+    line-height: 1.4;
   }
 
   .btn {
     font-size: 0.95rem;
     padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
   }
 
   .cls {
+    flex-direction: row;
+
     justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .socialIcon {
+    width: 25px;
+    height: 25px;
   }
 
   .dp {
@@ -153,5 +166,7 @@ section#intro {
   .picture {
     max-width: 250px;
     width: 80%;
+    height: auto;
+    border-radius: 50%;
   }
 }

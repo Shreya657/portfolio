@@ -1,264 +1,157 @@
-#intro{
-    height: 100vh;
-    width: 100vw;
-    max-width: 80rem;
-    margin: 0 auto;
-    overflow: hidden;
-    /* background-color: yellow; */
-    border: 2px solid white;
-    position: relative;
-}
-#intro.light{
-  border: 2.5px solid black;
-  height: 100vh;
-  width: 100vw;
-  max-width: 80rem;
-  margin: 0 auto;
-  overflow: hidden;
-  /* background-color: yellow; */
- 
-  position: relative;
-}
+/* General Styles */
+section#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
 
-.picture{
-    position: absolute;
-   top:20px;
-   right: 5rem;
-   background: none;
-   height: 80vh;
-   width: 400px;
-   border-radius: 50%;
-  
-  
-   /* Start hidden and moved */
-   opacity: 0;
-   transform: translateX(100px);
- 
-   /* Animation */
-   animation: fadeSlideIn 1s ease-out forwards;
  
 }
 
-
-
-
-
-
- /* Keyframes for the animation */
- @keyframes fadeSlideIn {
-   to {
-     opacity: 1;
-     transform: translateX(0);
-   }
- }
-
-   .introduction.dark{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 5rem;
-    font-size: 3rem;
-    font-weight: bolder;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-
-   }
-   .introduction.light{
-   
-    height: 100vh;
-    width: 100vw;
-    padding-left: 5rem;
-    font-size: 3rem;
-    font-weight: bolder;
-    color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-   }
-   .hello{
-    font-size: 1.7rem;
-    font-weight: 100;
-   }
+.introduction {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
-   .name.dark{
-     color: yellow;
-   }
-   .name.light{
-    color: red;
-  }
-  
-   .para{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    width: 730px;
-    font-weight: bold;
-     /* Start hidden and moved */
-     opacity: 0;
-     transform: translateX(100px);
-   
-     /* Animation */
-     animation: fadeSlideIn 1s ease-out forwards;
-   
-  }
-  
-  
-  
-  
-  
-  
-  
+}
 
-   
-   .btn{
-    background-color: white;
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    width: 300px;
-    font-size: 1rem;
-    font-weight: bold;
-   }
-   .btn:hover{
-    background-color: black;
-    color: white;
+.hello {
+  font-size: 2rem;
+}
 
-   }
-   .cls{
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    /* background-color: aqua; */
-    width: 300px;
-   justify-content: center; 
-   padding-top: 2rem;
-   }
-   .socialIcon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+.im {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
 
-    border: none;
-    opacity: 0;
-    filter: grayscale(100%);
-    transform: translateX(100px);
-    animation: fadeColorIn 1s ease-out forwards;
-  }
-  
-  /* Animate filter + opacity + position */
-  @keyframes fadeColorIn {
-    to {
-      opacity: 1;
-      filter: grayscale(0%);
-      transform: translateX(0);
-    }
-  }
-  
-  /* Optional: hover effect to highlight further */
-  .socialIcon:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  @media screen and (max-width: 768px){
-    #intro{
-      height: 90vh;
-      width: 90vw;
-      color: white;
+.name {
+  font-weight: bold;
+  display: inline-block;
+}
 
-      
-      
-    }
-    #intro.light{
-      height: 90vh;
-      width: 90vw;
-    }
-
-    .introduction{
-      /* padding: 1rem; */
-      font-size: 1.5rem;
-      padding-top: 50px;
-    
-      
-      
-    }
-    .introduction.dark{
-      color: white;
-    }
-
-    
-
-    .hello{
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding-right:30px;
-    }
-    .name{
-      font-size: 1.5rem;
-    }
-    .im{
-      font-size: 1.5rem;
-    }
-    .para{
-      font-size: 0.9rem;
-      /* color: black; */
-
-      font-weight: bold;
-      margin-top: 30px;
-      width: 50vw;
-   
- 
-    
-    }
-    .btn{
-      font-size: 1rem;
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .dp{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-    .picture{
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      top: 2rem;
-      left: 6rem;
-      background-color: blue;
-      border-radius: 50%;
-    
-      
-    }
-    .cls{
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-     
-      
-    }
- 
-   }
-   
-/* 🌙 Dark mode styles */
 .letter {
   display: inline-block;
+  animation: fadeIn 0.5s ease forwards;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   to {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+.role-title {
+  font-size: 1.5rem;
+  color: #6c63ff;
+  margin-top: 0.5rem;
+}
+
+.para {
+  margin: 1rem 0;
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+
+.cls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.dp {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Dark/Light Themes */
+.dark {
+  /* background-color: #121212; */
+  color: white;
+}
+
+.light {
+  /* background-color: #f5f5f5; */
+  color: black;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  section#intro {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .introduction {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hello {
+    font-size: 1.5rem;
+  }
+
+  .im {
+    font-size: 2rem;
+  }
+
+  .role-title {
+    font-size: 1.25rem;
+  }
+
+  .para {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .cls {
+    justify-content: center;
+  }
+
+  .dp {
+    margin-top: 2rem;
+  }
+
+  .picture {
+    max-width: 250px;
+    width: 80%;
   }
 }

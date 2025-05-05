@@ -92,9 +92,9 @@
    .para{
     font-size: 1.2rem;
     letter-spacing: 1px;
-    width: 450px;
+    width: 700px;
     font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
      /* Start hidden and moved */
      opacity: 0;
      transform: translateX(100px);
@@ -181,6 +181,7 @@
       /* padding: 1rem; */
       font-size: 1.5rem;
       padding-top: 50px;
+     
     
       
       
@@ -208,7 +209,7 @@
 
       font-weight: bold;
       margin-top: 30px;
-      width: 500px;
+      width: 350px;
    
  
     

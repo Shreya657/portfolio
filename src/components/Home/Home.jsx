@@ -17,13 +17,7 @@ const Home = ({darkMode}) => {
 
 
         <div className={`introduction ${darkMode ? 'dark' : 'light'}`}>
-        {/* <button className='btn toggle-btn' onClick={toggleMode}>
-        <img
-    src={darkMode ?  "https://cdn-icons-png.flaticon.com/512/869/869869.png" :  "https://cdn-icons-png.flaticon.com/512/1164/1164954.png"}
-    alt='theme-icon'
-    className='theme-icon'
-  />
-        </button> */}
+       
             <span className='hello'>hello,</span>
             <span className='im'>
                I'm <span className={`name ${darkMode ? 'dark' : 'light'}`}>

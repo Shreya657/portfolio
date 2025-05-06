@@ -1,11 +1,12 @@
 #intro {
   height: 100vh;
-  width: 100vw;
-  max-width: 80rem;
+  width: 90vw;
+  /*  */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   border: 2px solid white;
+ background-color: red;
 }
 
 #intro.light {
@@ -173,6 +174,7 @@
 
   .cls {
       width: 250px;
+     
   }
 
   .socialIcon {
@@ -186,8 +188,11 @@
 
   #intro {
       height: auto;
-      width: 100%;
+      width: 90vw;
       padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
   }
 
   .picture {
@@ -205,10 +210,13 @@
       padding-left: 2rem;
       justify-content: center;
       text-align: center;
+      padding-top: 160px;
   }
 
   .hello {
       font-size: 1.5rem;
+      display: flex;
+     justify-content: space-evenly;
   }
 
   .name {
@@ -222,14 +230,15 @@
   }
 
   .btn {
-      width: 80%;
+      width: 70%;
       padding: 0.7rem 1.5rem;
       font-size: 1.1rem;
+
   }
 
   .cls {
       width: 100%;
-      justify-content: space-evenly;
+      
   }
 
   .socialIcon {

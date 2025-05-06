@@ -1,41 +1,35 @@
-/* .App{
-  /* background-color: rgb(33, 26, 40); */
-  /* background-image:url( "https://www.codewithrandom.com/wp-content/uploads/2022/11/15-Bootstrap-login-forms38.png");
-} */ */
-/* Default styles */
+/* Reset */
 body {
   margin: 0;
   padding: 0;
-  /* transition: background 0.5s, color 0.5s; */
-  overflow-x: hidden;
+  /* Remove fixed background on small screens */
+  background-attachment: scroll;
+  transition: background 0.5s, color 0.5s;
 }
 
 /* Light Mode */
 body.light {
-  background: url('https://wallpapercave.com/wp/wp2894323.jpg') no-repeat center center fixed;
+  background: url('https://wallpapercave.com/wp/wp2894323.jpg') no-repeat center center;
   background-size: cover;
   color: #000;
-  overflow-x: hidden;
 }
 
 /* Dark Mode */
 body.dark {
-  background: url('https://www.codewithrandom.com/wp-content/uploads/2022/11/15-Bootstrap-login-forms38.png') no-repeat center center fixed;
+  background: url('https://www.codewithrandom.com/wp-content/uploads/2022/11/15-Bootstrap-login-forms38.png') no-repeat center center;
   background-size: cover;
   color: #fff;
-  overflow-x: hidden;
 }
 
-
-/* Ensure components adapt to text color */
-
-
-
-
-
-
-
-
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  body.light,
+  body.dark {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
+}
 
 
 

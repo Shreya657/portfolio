@@ -19,7 +19,7 @@ const App = () => {
     document.body.className = darkMode ? 'dark' : 'light';
   }, [darkMode]);
   return (
-    < div className="App">
+    < div className="container">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <div id="home">
         <Home darkMode={darkMode} setDarkMode={setDarkMode} />

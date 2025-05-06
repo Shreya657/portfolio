@@ -3,10 +3,7 @@ import './Home.css'
 import Men from './th-removebg-preview.png'
 import About from '../About/About'
 const Home = ({darkMode}) => {
-  // function scroll(){
-  //   const aboutSection=document.getElementById('about');
-  //   aboutSection.scrollIntoView({behavior:'smooth'});
-  // }
+ 
   function navigate(){
     window.location.href="#about";
   }

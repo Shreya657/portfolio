@@ -1,276 +1,133 @@
-#intro{
-    height: 100vh;
-    width: 100vw;
-    max-width: 80rem;
-    margin: 0 auto;
-    overflow: hidden;
-    /* background-color: yellow; */
-    border: 2px solid white;
-    position: relative;
-}
-#intro.light{
-  border: 2.5px solid black;
+#intro {
   height: 100vh;
   width: 100vw;
   max-width: 80rem;
   margin: 0 auto;
   overflow: hidden;
-  /* background-color: yellow; */
- 
   position: relative;
+  border: 2px solid white;
 }
 
-.picture{
-    position: absolute;
-   top:20px;
-   right: 5rem;
-   background: none;
-   height: 80vh;
-   width: 400px;
-   border-radius: 50%;
-  
-  
-   /* Start hidden and moved */
-   opacity: 0;
-   transform: translateX(100px);
- 
-   /* Animation */
-   animation: fadeSlideIn 1s ease-out forwards;
- 
+#intro.light {
+  border: 2.5px solid black;
 }
 
+.picture {
+  position: absolute;
+  top: 20px;
+  right: 5rem;
+  background: none;
+  height: 80vh;
+  width: 400px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
 
-
-
-
-
- /* Keyframes for the animation */
- @keyframes fadeSlideIn {
-   to {
-     opacity: 1;
-     transform: translateX(0);
-   }
- }
-
-   .introduction.dark{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 5rem;
-    font-size: 3rem;
-    font-weight: bolder;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-
-   }
-   .introduction.light{
-   
-    height: 100vh;
-    width: 100vw;
-    padding-left: 5rem;
-    font-size: 3rem;
-    font-weight: bolder;
-    color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-   }
-   .hello{
-    font-size: 1.7rem;
-    font-weight: 100;
-   }
-  
-   .name.dark{
-     color: yellow;
-   }
-   .name.light{
-    color: red;
+@keyframes fadeSlideIn {
+  to {
+      opacity: 1;
+      transform: translateX(0);
   }
-  
-   .para{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    width: 700px;
-    font-weight: bold;
-    /* text-align: center; */
-     /* Start hidden and moved */
-     opacity: 0;
-     transform: translateX(100px);
-   
-     /* Animation */
-     animation: fadeSlideIn 1s ease-out forwards;
-   
-  }
-  
-  
-  
-  
-  
-  
-  
+}
 
-   
-   .btn{
-    background-color: white;
-    margin: 1rem 0;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    width: 300px;
-    font-size: 1rem;
-    font-weight: bold;
-   }
-   .btn:hover{
-    background-color: black;
-    color: white;
+.introduction.dark {
+  height: 100vh;
+  width: 100vw;
+  padding-left: 5rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-   }
-   .cls{
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    /* background-color: aqua; */
-    width: 300px;
-   justify-content: center; 
-   padding-top: 2rem;
-   }
-   .socialIcon {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+.introduction.light {
+  height: 100vh;
+  width: 100vw;
+  padding-left: 5rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-    border: none;
-    opacity: 0;
-    filter: grayscale(100%);
-    transform: translateX(100px);
-    animation: fadeColorIn 1s ease-out forwards;
-  }
-  
-  /* Animate filter + opacity + position */
-  @keyframes fadeColorIn {
-    to {
+.hello {
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.name.dark {
+  color: yellow;
+}
+
+.name.light {
+  color: red;
+}
+
+.para {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  width: 700px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.btn {
+  background-color: white;
+  margin: 1rem 0;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  width: 300px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.cls {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 300px;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.socialIcon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0;
+  filter: grayscale(100%);
+  transform: translateX(100px);
+  animation: fadeColorIn 1s ease-out forwards;
+}
+
+@keyframes fadeColorIn {
+  to {
       opacity: 1;
       filter: grayscale(0%);
       transform: translateX(0);
-    }
   }
-  
-  /* Optional: hover effect to highlight further */
-  .socialIcon:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  @media screen and (max-width: 768px){
-    #intro{
-      height: 90vh;
-      width: 90vw;
-      color: white;
-     
- 
+}
 
-      
-      
-    }
-    #intro.light{
-      height: 90vh;
-      width: 90vw;
-    }
+.socialIcon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
 
-    .introduction{
-      /* padding: 1rem; */
-      font-size: 1.5rem;
-      padding-top: 50px;
-      padding-left: 0px;
-   
-    
-     
-     
-    
-      
-      
-    }
-    .introduction.dark{
-      color: white;
-      padding-left: 0px;
-    }
-
-    
-
-    .hello{
-      padding-top: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      /* padding-right:0px; */
-    }
-    .name{
-      font-size: 1.5rem;
-    }
-    .im{
-      font-size: 1.5rem;
-    }
-    .para{
-      font-size: 0.9rem;
-      /* color: black; */
-
-      font-weight: bold;
-      margin-top: 30px;
-     width: fit-content;
-   
- 
-    
-    }
-    .space{
-      width: 70vw;
-    }
-    .btn{
-      font-size: 1rem;
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .dp{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-    .picture{
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      top: 2rem;
-      left: 6rem;
-      background-color: blue;
-      border-radius: 50%;
-    
-      
-    }
-    .cls{
-     margin-top: 40px;
-
-      display: flex;
-      flex-direction: row;
-      gap: 1.2rem;
-      /* background-color: aqua; */
-      width: 50vw;
-     /* background-color: aqua; */
-     
-     justify-content: center; 
-     padding-top: 1.5rem;
-     padding-bottom: 50px;
-     
-     
-      
-    }
- 
-   }
-   
-/* 🌙 Dark mode styles */
 .letter {
   display: inline-block;
   opacity: 0;
@@ -280,7 +137,103 @@
 
 @keyframes fadeInUp {
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* ------------------------- RESPONSIVE STYLES ------------------------- */
+
+/* For smaller devices (tablets and below) */
+@media (max-width: 1024px) {
+
+  .picture {
+      width: 300px;
+      height: 60vh;
+      top: 10px;
+      right: 3rem;
+  }
+
+  .introduction {
+      font-size: 2.2rem;
+      padding-left: 3rem;
+  }
+
+  .para {
+      width: 90%;
+      font-size: 1rem;
+      text-align: center;
+      padding: 0 1rem;
+  }
+
+  .btn {
+      width: 250px;
+      padding: 0.6rem 1.5rem;
+  }
+
+  .cls {
+      width: 250px;
+  }
+
+  .socialIcon {
+      width: 40px;
+      height: 40px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+
+  #intro {
+      height: auto;
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .picture {
+      width: 250px;
+      height: 250px;
+      top: 10px;
+      right: 50%;
+      transform: translateX(50%);
+      opacity: 1;
+      animation: none; /* No animation needed on mobile */
+  }
+
+  .introduction {
+      font-size: 1.8rem;
+      padding-left: 2rem;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .hello {
+      font-size: 1.5rem;
+  }
+
+  .name {
+      font-size: 2rem;
+  }
+
+  .para {
+      width: 90%;
+      font-size: 1rem;
+      text-align: center;
+  }
+
+  .btn {
+      width: 80%;
+      padding: 0.7rem 1.5rem;
+      font-size: 1.1rem;
+  }
+
+  .cls {
+      width: 100%;
+      justify-content: space-evenly;
+  }
+
+  .socialIcon {
+      width: 35px;
+      height: 35px;
   }
 }
